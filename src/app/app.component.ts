@@ -1,15 +1,13 @@
 import { Component, Injector } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
-import { TableComponent } from './compinent/table/table.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app2-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class App2Component {
   title = 'app2';
-  constructor(private injector: Injector) {
+  constructor() {
   }
 
 //   ngDoBootstrap() {

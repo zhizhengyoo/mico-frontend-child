@@ -1,7 +1,7 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from './app/app.module';
+import { App2Module } from './app/app.module';
 import { environment } from './environments/environment';
 import { PlanetPortalApplication, PlanetRouterEvent, GlobalEventDispatcher, defineApplication } from '@worktile/planet';
 
@@ -16,9 +16,9 @@ if (environment.production) {
 //           useValue: portalApp
 //       }
 //   ])
-//       .bootstrapModule(AppModule)
-//       .then(appModule => {
-//           return appModule;
+//       .bootstrapModule(App2Module)
+//       .then(App2Module => {
+//           return App2Module;
 //       })
 //       .catch(error => {
 //           console.error(error);
@@ -26,5 +26,5 @@ if (environment.production) {
 //       });
 // });
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(App2Module)
   .catch(err => console.error(err));

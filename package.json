@@ -1,6 +1,6 @@
 {
   "name": "micro-app2",
-  "version": "0.0.0",
+  "version": "0.0.15",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,10 +12,11 @@
     "concat-es5": "concat -o output/output-es5.js ./dist/app2/runtime-es5.js ./dist/app2/polyfills-es5.js ./dist/app2/main-es5.js",
     "concat-es2015": "concat -o output/output-es2015.js ./dist/app2/runtime-es2015.js ./dist/app2/polyfills-es2015.js ./dist/app2/main-es2015.js",
     "concat": "npm run concat-es5 && npm run concat-es2015",
-    "_build": "ng build --prod --aot --output-hashing=none && npm run concat"
+    "_build": "ng build --prod --aot --output-hashing=none && npm run concat",
+    "packagr": "ng-packagr -p ng-package.json"
   },
   "private": false,
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "~9.1.0",
     "@angular/cdk": "^10.2.2",
     "@angular/common": "~9.1.0",
@@ -39,9 +40,9 @@
     "@angular/cli": "~9.1.0",
     "@angular/compiler-cli": "~9.1.0",
     "@angular/language-service": "~9.1.0",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -50,6 +51,7 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "ng-packagr": "^10.1.2",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
